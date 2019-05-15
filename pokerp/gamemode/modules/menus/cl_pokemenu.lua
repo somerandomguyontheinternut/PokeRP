@@ -20,7 +20,7 @@ function PokeRP.CustomizePokeFrame()
 	PokeRP.PokeFrame:Center()
 	local LayOut = PRP_MApi.Derma("DListLayout",PokeRP.PokeFrame,PRP_MApi.Vector2D(500,480),PRP_MApi.Vector2D(0,20))
 	for i=1,#PokeRP.Pokemons do
-		local btn = PRP_MApi.Derma("DButton",nil,PRP_MApi.Vector2D(500,175),nil,nil,nil,function() net.Start("PokeRP_SetPoke") net.WriteInt(i,32) net.SendToServer() end)
+		local btn = PRP_MApi.Derma("DButton",nil,PRP_MApi.Vector2D(500,175),PokeRP.Pokemons[i].name,nil,nil,function() net.Start("PokeRP_SetPoke") net.WriteInt(i,32) net.SendToServer() end)
 		local mdl = PRP_MApi.Derma("DModelPanel",btn,PRP_MApi.Vector2D(200,175))
 		mdl:SetModel(PokeRP.Pokemons[i].model)
 		LayOut:Add(btn)
