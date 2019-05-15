@@ -19,3 +19,7 @@ function GM:PlayerInitialSpawn(ply)
 	ply:RecoverPlayerData()
 	ply:SetTeam(1)
 end
+
+function GM:ShowSpare2(ply)
+	ply:SendLua("PokeRP.F4Menu()")
+end
