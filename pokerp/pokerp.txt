@@ -1,7 +1,7 @@
 "pokerp"
 {
-    "base"  "sandbox"
-    "title" "pokerp"
-    "maps"  "^rp_"
-    "menusystem"    "1"
+"base"	"sandbox"
+"title"		"PokeRP"
+"maps"	"^rp_"
+"menusystem"	"1"
 }
