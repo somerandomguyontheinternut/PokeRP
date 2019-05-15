@@ -1,3 +1,5 @@
 include("shared.lua")
+include("modules/menus/cl_f4menu.lua")
 include("modules/menus/cl_pokemenu.lua")
 include("modules/menus/api/cl_derma.lua")
+include("config/pokeconfig.lua")

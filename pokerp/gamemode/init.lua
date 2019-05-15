@@ -1,13 +1,15 @@
 AddCSLuaFile("cl_init.lua")
 AddCSLuaFile("shared.lua")
+AddCSLuaFile("modules/menus/cl_f4menu.lua")
 AddCSLuaFile("modules/menus/cl_pokemenu.lua")
 AddCSLuaFile("modules/menus/api/cl_derma.lua")
+AddCSLuaFile("config/pokeconfig.lua")
 
 
 
 include("shared.lua")
 
-include("config/sv_pokeconfig.lua")
+include("config/pokeconfig.lua")
 include("config/sv_sqlconfig.lua")
 
 include("modules/database/interface/sv_interface.lua")
