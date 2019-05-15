@@ -3,7 +3,7 @@ function GM:PlayerLoadout(ply)
 		for i=1,#PokeRP.TrainerWeapons do
 			ply:Give(PokeRP.TrainerWeapons[i])
 		end
-	else
+	elseif(ply:Team() == 2)
 		for i=1,#PokeRP.Pokemons[ply:GetNWInt("PokeRP_Pokemon")].movesets do
 			ply:Give(PokeRP.Pokemons[ply:GetNWInt("PokeRP_Pokemon")].movesets[i])
 		end
@@ -17,4 +17,5 @@ end
 
 function GM:PlayerInitialSpawn(ply)
 	ply:RecoverPlayerData()
+	ply:SetTeam(1)
 end
