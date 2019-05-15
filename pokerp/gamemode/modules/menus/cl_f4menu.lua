@@ -14,5 +14,5 @@ end
 function PRM_MApi.Derma(DPanel,Parent,Size,Pos,TextIfAny)
 ]]--
 function PokeRP.CustomizeF4Frame()
-	PRP_MApi.Derma("DButton",PokeRP.F4Frame,PRP_MApi.2DVector(50,50),PRP_MApi.2DVector(50,50),"Hey",nil,function() print("ha") end)
+	PRP_MApi.Derma("DButton",PokeRP.F4Frame,PRP_MApi.Vector2D(50,50),PRP_MApi.Vector2D(50,50),"Hey",nil,function() print("ha") end)
 end

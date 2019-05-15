@@ -1,14 +1,14 @@
 PRP_MApi = {}
 
-function PRP_MApi.2DVector(val1,val2)
-	local rtrn {
+function PRP_MApi.Vector2D(val1,val2)
+	local rtrn = {
 	x = val1,
 	y = val2
 	}
 	return rtrn
 end
 
-function PRM_MApi.Derma(DPanel,Parent,Size,Pos,TextIfAny,PaintFunc,DoClick)
+function PRP_MApi.Derma(DPanel,Parent,Size,Pos,TextIfAny,PaintFunc,DoClick)
 	local Panel
 	if(Parent == nil) then Panel = vgui.Create(DPanel)
 	else Panel = vgui.Create(DPanel,Parent) end
