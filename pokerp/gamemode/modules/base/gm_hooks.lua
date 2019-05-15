@@ -4,9 +4,8 @@ function GM:PlayerLoadout(ply)
 			ply:Give(PokeRP.TrainerWeapons[i])
 		end
 	else
-		local PokeTBL = PokeRP.Pokemons[ply:GetNWInt("PokeRP_Pokemon")]
-		for i=1,#PokeTBL.movesets do
-			ply:Give(PokeTBL.movesets[i])
+		for i=1,#PokeRP.Pokemons[ply:GetNWInt("PokeRP_Pokemon")].movesets do
+			ply:Give(PokeRP.Pokemons[ply:GetNWInt("PokeRP_Pokemon")].movesets[i])
 		end
 	end
 end
