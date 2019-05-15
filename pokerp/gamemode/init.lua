@@ -14,3 +14,5 @@ include("modules/database/interface/sv_interface.lua")
 include("modules/database/mysqlite.lua")
 include("modules/database/sv_data.lua")
 include("modules/base/gm_hooks.lua")
+
+MySQLite.initialize()
