@@ -18,7 +18,9 @@ function PokeRP.CustomizePokeFrame()
 	PokeRP.PokeFrame:MakePopup()
 	PokeRP.PokeFrame:SetSize(500,500)
 	PokeRP.PokeFrame:Center()
-	local LayOut = PRP_MApi.Derma("DListLayout",PokeRP.PokeFrame,PRP_MApi.Vector2D(500,480),PRP_MApi.Vector2D(0,20))
+	local ScrollBar =  PRP_MApi.Derma("DScrollPanel",PokeRP.PokeFrame)
+	local LayOut = PRP_MApi.Derma("DListLayout",nil,PRP_MApi.Vector2D(500,480),PRP_MApi.Vector2D(0,20))
+	ScrollBar:Add(LayOut)
 	for i=1,#PokeRP.Pokemons do
 	local str = PokeRP.Pokemons[i].name .. "\n HP:" .. PokeRP.Pokemons[i].health .. "\n Movesets"
 	
