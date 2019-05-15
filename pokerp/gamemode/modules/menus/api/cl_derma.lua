@@ -12,9 +12,10 @@ function PRP_MApi.Derma(DPanel,Parent,Size,Pos,TextIfAny,PaintFunc,DoClick)
 	local Panel
 	if(Parent == nil) then Panel = vgui.Create(DPanel)
 	else Panel = vgui.Create(DPanel,Parent) end
-	Panel:SetSize(Size.x,Size.y)
-	Panel:SetPos(Pos.x,Pos.y)
+	if(Size != nil) then Panel:SetSize(Size.x,Size.y) end
+	if(Pos != nil) then Panel:SetPos(Pos.x,Pos.y) end
 	if(TextIfAny != nil) then Panel:SetText(TextIfAny) end
 	if(PaintFunc != nil) then Panel.Paint = PaintFunc end
 	if(DoClick != nil) then Panel.DoClick = DoClick end
+	return Panel
 end

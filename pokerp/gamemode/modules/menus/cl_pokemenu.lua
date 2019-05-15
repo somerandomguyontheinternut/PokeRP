@@ -12,11 +12,16 @@ function PokeRP.CustomizePokeFrame
 end
 
 
-function PRM_MApi.Derma(DPanel,Parent,Size,Pos,TextIfAny)
+function PRP_MApi.Derma(DPanel,Parent,Size,Pos,TextIfAny,PaintFunc,DoClick)
 ]]--
 function PokeRP.CustomizePokeFrame()
-	PokeRP.PokeFrame:Center()
 	PokeRP.PokeFrame:MakePopup()
 	PokeRP.PokeFrame:SetSize(500,500)
-	PRP_MApi.Derma("DButton",PokeRP.PokeFrame,PRP_MApi.Vector2D(50,50),PRP_MApi.Vector2D(50,50),"Hey",nil,function() print("ha") end)
+	PokeRP.PokeFrame:Center()
+	local LayOut = PRP_MApi.Derma("DListLayout",PokeRP.PokeFrame,PRP_MApi.Vector2D(500,480),PRP_MApi.Vector2D(0,20))
+	for i=1,#PokeRP.Pokemons do
+		local btn = PRP_MApi.Derma("DButton",nil,PRP_MApi.Vector2D(500,175),nil,nil,nil,function() net.Start("PokeRP_SetPoke") net.WriteInt(i,32) net.SendToServer() end)
+		local mdl = PRP_MApi.Derma("DModelPanel",btn,PRP_MApi.Vector2D(200,175))
+		mdl:SetModel(PokeRP.Pokemons[i].model)
+	end
 end
