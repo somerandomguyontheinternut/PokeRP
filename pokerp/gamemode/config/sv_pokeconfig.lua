@@ -3,3 +3,7 @@ PokeRP.Pokemons = {
     {name = "Bulbasaur", health = "45", movesets = {"move_megadrain"}, model = "models/yunpolmodels/pokemon/gen 1/bulbasaur.mdl" },
     {name = "Pikachu", health = "50", movesets = {"move_thunderbolt"}, model = "models/yunpolmodels/pokemon/gen 1/pikachu_male.mdl"}
 }
+-- Crowbar is just an Example
+PokeRP.TrainerWeapons = {
+"weapon_crowbar"
+}

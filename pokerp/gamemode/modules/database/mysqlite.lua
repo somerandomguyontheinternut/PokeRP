@@ -94,17 +94,6 @@ Said To Make it Faster To Load ^
 ]]--
 
 
-
-    
-RP_MySQLConfig = {}
-RP_MySQLConfig.EnableMySQL = true
-RP_MySQLConfig.Host = "89.34.99.20"
-RP_MySQLConfig.Username = "u1534_9jToTkOzTo"
-RP_MySQLConfig.Password = "TxmDlmevQIC5devZ"
-RP_MySQLConfig.Database_name = "s1534_db"
-RP_MySQLConfig.Database_port = 3306
-RP_MySQLConfig.MultiStatements = false
-
 local multistatements
 
 local MySQLite_config = MySQLite_config or RP_MySQLConfig
