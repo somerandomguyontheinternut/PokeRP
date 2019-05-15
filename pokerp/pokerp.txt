@@ -1,0 +1,7 @@
+"pokerp"
+{
+    "base"  "sandbox"
+    "title" "pokerp"
+    "maps"  "^rp_"
+    "menusystem"    "1"
+}
