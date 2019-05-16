@@ -6,11 +6,13 @@ net.Receive("PokeRP_SetPoke",function(len,ply)
 	if(poke == -1) then
 		ply:SetTeam(1)
 		ply:SetNWInt("PokeRP_Pokemon",poke)
-		ply:Respawn()
+		ply:StripWeapons()
+		ply:Spawn()
 	end
 	if(poke <= #PokeRP.Pokemons) then
 		ply:SetNWInt("PokeRP_Pokemon",poke)
 		ply:SetTeam(2)
-		ply:Respawn()
+		ply:StripWeapons()
+		ply:Spawn()
 	end
 end)
